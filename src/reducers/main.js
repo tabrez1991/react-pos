@@ -35,12 +35,11 @@ export default function (state = initialState, action) {
                 }
             });
             if (flag != 1) {
-                payload["id"] = payload.name + "_" + new Date().getTime()
+                payload["id"] = payload.name + "_" + _process_items.length
                 payload["quantity"] = 1;
                 payload["total"] = payload.price * 1;
                 _process_items.push(payload);
             }
-            console.log(_process_items)
             return {
                 ...state,
                 process_items: _process_items,
