@@ -16,9 +16,6 @@ const LeftPannel = (props) => {
 
   useEffect(() => {
     calcTotal(props.process_items, state.vat_i, state.discount_i)
-    return () => {
-      console.log("Leftpannel unmounted")
-    }
   }, [props])
 
   const handleIncreament = (id) => {
@@ -154,14 +151,14 @@ const LeftPannel = (props) => {
             <div>Discount</div>
             <div>Total</div>
           </div>
-          <div className="product-price-list">
+          <div className="product-price-list" data-test="product-price-list">
             <div><span>{sub_total} EUR</span><span>{items} items</span></div>
             <div><input type="text" value={vat_i} onChange={handleVat} className="inputfield" /><span>{vat} EUR</span></div>
             <div><input type="text" value={discount_i} onChange={handleDiscount} className="inputfield" /><span>{discount} EUR</span></div>
             <div><span style={{ color: "#1ABC9C" }}>{total} EUR</span><span></span></div>
           </div>
         </div>
-        <div className="product-buttons">
+        <div className="product-buttons" data-test="product-buttons">
           <div onClick={props.resetItem}>Cancel Sale</div>
           <div onClick={handleProcessSell} style={products.length > 0 ? { cursor: "pointer" } : { cursor: "not-allowed" }}>Process Sale</div>
         </div>

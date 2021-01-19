@@ -3,13 +3,12 @@ import { connect } from 'react-redux';
 import { closeProcessSell, resetItem } from "../../actions/main";
 
 const ProcessSale = (props) => {
-    console.log(props.process_sell)
     const handleClose = () => {
         props.closeProcessSell();
         props.resetItem()
     }
     return (
-        <div>
+        <div data-test="process-sell">
             <div className="cover"></div>
             <div className="reciept-conatiner">
                 <div className="reciept-header">Receipt</div>

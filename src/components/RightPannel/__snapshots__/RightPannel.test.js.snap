@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RightPannel Component should match the snapshot 1`] = `"<div class=\\"product_list\\" data-test=\\"product_list\\"><div>Loading...</div></div>"`;
